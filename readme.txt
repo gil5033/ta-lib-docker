@@ -34,3 +34,4 @@ Date
 2019-12-26  284.820007  289.980011  284.700012  289.910004  288.442780  23280300
 
 [249 rows x 6 columns]
+# There should be an image called yahoo.aapl.png in this directory.
