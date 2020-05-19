@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r /ta-lib-py/requirements.txt
 RUN cd /ta-lib-py && python setup.py install
 
 # install some python libs
-RUN pip install --no-cache-dir pandas bybit ccxt python-binance
+RUN pip install --no-cache-dir pandas bybit ccxt python-binance pandas-datareader matplotlib scipy
 
 # install vim
 RUN apt-get update && apt-get install -y \
