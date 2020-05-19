@@ -14,8 +14,9 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r /ta-lib-py/requirements.txt
 RUN cd /ta-lib-py && python setup.py install
 
-# verify that we can use the python wrapper by listing out the functions
-RUN mkdir /ta
-COPY one.py /ta/one.py
-RUN chmod +x /ta/one.py
-RUN /ta/one.py
+# install some python libs
+RUN pip install --no-cache-dir pandas bybit ccxt python-binance
+
+# install vim
+RUN apt-get update && apt-get install -y \
+  vim
