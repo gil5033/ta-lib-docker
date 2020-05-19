@@ -1,0 +1,1 @@
+docker run --rm -it -e "CBPRO_API_KEY=$CBPRO_API_KEY" -e "CBPRO_SECRET=$CBPRO_SECRET" -e "CBPRO_PASSWORD=$CBPRO_PASSWORD" -v $(pwd):/ta mkinney/ta-lib-docker python /ta/$1
