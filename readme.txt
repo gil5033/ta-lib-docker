@@ -35,3 +35,25 @@ Date
 
 [249 rows x 6 columns]
 # There should be an image called yahoo.aapl.png in this directory.
+
+
+# Want some Crypto data? Check out this really cool script:
+./run download_data.py -s ETH/USD -e coinbasepro
+# This created this file: coinbasepro-ETHUSD-1d.csv
+
+# Now you can read it back into a panda like this:
+./run data_analyze.py coinbasepro-ETHUSD-1d.csv
+         Timestamp    Open    High     Low   Close         Volume
+0    1564099200000  219.29  222.12  212.69  219.35   75266.416623
+1    1564185600000  219.42  224.14  202.46  207.11  130620.902611
+2    1564272000000  207.11  213.98  197.00  211.50   81987.963835
+3    1564358400000  211.50  215.31  205.70  210.73   93192.251443
+4    1564444800000  210.70  214.56  204.00  209.83   55786.220075
+..             ...     ...     ...     ...     ...            ...
+295  1589587200000  194.66  203.36  193.24  200.53   89046.632384
+296  1589673600000  200.50  210.00  199.10  207.05  114512.310561
+297  1589760000000  207.05  216.99  206.99  214.97  163043.280967
+298  1589846400000  214.97  215.84  209.22  214.71   98803.929453
+299  1589932800000  214.80  214.97  213.76  214.18    2578.691922
+
+[300 rows x 6 columns]
