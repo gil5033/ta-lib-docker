@@ -1,9 +1,14 @@
-Build docker image so you can use TA-lib using python.
+Docker image for using python libraries (like TA-lib and ccxt). If on linux (or possibly a mac), you may not need this docker image
+as you can just create a python virtual environment and just "pip install" these libraries. Just trying to make it easy
+for people to get started with python-based trading/analysis.
 
-See https://mrjbq7.github.io/ta-lib/
+See https://mrjbq7.github.io/ta-lib/ for more info on TA-lib.
+See https://github.com/ccxt/ccxt/wiki/Manual for more info on CCXT.
 
-# Note: You may need "sudo" before this command.
+# If you want to build this container from the Dockerfile, run this: (most people will not need to do this step)
 docker build -t ta-lib-docker:latest .
+# or "make build"
+# Note: You may need "sudo" before the docker command.
 
 # You can run your local scripts like this:
 # (which will volume mount the current directory as "/ta" on the docker container)
@@ -40,6 +45,7 @@ Date
 # Want some Crypto data? Check out this really cool script:
 ./run download_data.py -s ETH/USD -e coinbasepro
 # This created this file: coinbasepro-ETHUSD-1d.csv
+
 
 # Now you can read it back into a panda like this:
 ./run data_analyze.py coinbasepro-ETHUSD-1d.csv
